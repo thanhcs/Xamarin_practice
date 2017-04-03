@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="XamarinForms_Udemy.ImageDetailPage"
+	BackgroundColor="White">
+	<ContentPage.Resources>
+		<ResourceDictionary>
+			<Style x:Key="userLabelStyle" TargetType="Label">
+				<Setter Property="TextColor" Value="Black" />
+				<Setter Property="FontSize" Value="16" />
+			</Style>
+
+			<Style x:Key="actionLabelStyle" TargetType="Label">
+				<Setter Property="TextColor" Value="Gray" />
+				<Setter Property="FontSize" Value="14" />
+			</Style>
+		</ResourceDictionary>
+	</ContentPage.Resources>
+	<ContentPage.Padding>
+		<OnPlatform x:TypeArguments="Thickness"
+			iOS="0,20,0,0"
+		/>
+	</ContentPage.Padding>
+	<StackLayout>
+		<StackLayout Padding="10,10,0,10">
+			<Label Text="nyc_photographer" Style="{StaticResource userLabelStyle}"/>
+		</StackLayout>
+		<Image Source="http://lorempixel.com/1920/1080/nature/3/" />
+		<StackLayout Orientation="Horizontal" Padding="10,10, 10, 20" Spacing="20">
+			<Label Text="Like" Style="{StaticResource actionLabelStyle}"/>
+			<Label Text="Comment" Style="{StaticResource actionLabelStyle}"/>
+			<Label Text="Share" Style="{StaticResource actionLabelStyle}"/>
+		</StackLayout>
+		<StackLayout Padding="10, 0, 10, 0" Spacing="5">
+			<BoxView Color="#f0f0f0" HeightRequest="1" />
+			<Label Text="700 likes" FontAttributes="Bold" Style="{StaticResource userLabelStyle}" />
+			<Label Text="This is a shot yesterday in Skanor, Sweden, when driving home, from a couple of days of work in Denmark." Style="{StaticResource actionLabelStyle}" />
+		</StackLayout>
+	</StackLayout>
+</ContentPage>
