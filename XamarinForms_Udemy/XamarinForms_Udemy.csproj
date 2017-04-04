@@ -44,6 +44,9 @@
     <Compile Include="AbsLayoutEx1.xaml.cs">
       <DependentUpon>AbsLayoutEx1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AbsLayoutEx2.xaml.cs">
+      <DependentUpon>AbsLayoutEx2.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
@@ -95,6 +98,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AbsLayoutEx1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AbsLayoutEx2.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
