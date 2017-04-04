@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinForms_Udemy.ImageEx"
+             BackgroundColor="Black">
+    <AbsoluteLayout>
+        <Image x:Name="image" AbsoluteLayout.LayoutBounds="0,.5, 1, 1" AbsoluteLayout.LayoutFlags="All" />
+        <StackLayout Padding="20, 0" Orientation="Horizontal" VerticalOptions="Center" BackgroundColor="Yellow"
+                     AbsoluteLayout.LayoutBounds=".5, .05, .9, 100" 
+                     AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional">
+            <Label Text="PRE" TextColor="White" HorizontalOptions="Center" BackgroundColor="Blue"/>
+            <!--<ActivityIndicator Color="White" IsRunning="{Binding Source={x:Reference image}, Path=IsLoading}" />-->
+            <ActivityIndicator Color="White" IsRunning="True" HorizontalOptions="CenterAndExpand" BackgroundColor="Blue"/>
+            <Label Text="NEXT" TextColor="White" HorizontalOptions="End"  BackgroundColor="Blue"/>
+        </StackLayout>
+    </AbsoluteLayout>
+</ContentPage>

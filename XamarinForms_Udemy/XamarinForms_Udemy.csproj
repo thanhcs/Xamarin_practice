@@ -56,6 +56,9 @@
     <Compile Include="GridEx2.xaml.cs">
       <DependentUpon>GridEx2.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ImageEx.xaml.cs">
+      <DependentUpon>ImageEx.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RelativeLayoutEx.xaml.cs">
       <DependentUpon>RelativeLayoutEx.xaml</DependentUpon>
     </Compile>
@@ -113,6 +116,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="RelativeLayoutEx.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ImageEx.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

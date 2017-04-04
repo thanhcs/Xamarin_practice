@@ -38,8 +38,8 @@
             Property=Height,
             Factor=1,
             Constant=30}" HorizontalOptions="Center">
-            <Label Text="Why pay for credit?" FontSize="15" FontAttributes="Bold" HorizontalOptions="Center"/>
-            <Label HorizontalTextAlignment="Center" FontSize="13">
+            <Label Text="Why pay for credit?" FontSize="15" FontAttributes="Bold" HorizontalOptions="Center" TextColor="Black"/>
+            <Label HorizontalTextAlignment="Center" FontSize="13" TextColor="Black">
                 Because you can reach people who aren't on
 SkyeApp by calling mobile and landline
 numbers, or spending SMS, at low-cost rates.
