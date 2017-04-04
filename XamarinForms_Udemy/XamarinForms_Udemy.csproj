@@ -56,6 +56,9 @@
     <Compile Include="GridEx2.xaml.cs">
       <DependentUpon>GridEx2.xaml</DependentUpon>
     </Compile>
+    <Compile Include="RelativeLayoutEx.xaml.cs">
+      <DependentUpon>RelativeLayoutEx.xaml</DependentUpon>
+    </Compile>
     <Compile Include="XamarinForms_UdemyPage.xaml.cs">
       <DependentUpon>XamarinForms_UdemyPage.xaml</DependentUpon>
     </Compile>
@@ -104,6 +107,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AbsLayoutEx2.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RelativeLayoutEx.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

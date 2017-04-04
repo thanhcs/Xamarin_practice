@@ -8,7 +8,7 @@ namespace XamarinForms_Udemy
 		{
 			InitializeComponent();
 
-			MainPage = new AbsLayoutEx2();
+			MainPage = new RelativeLayoutEx();
 		}
 
 		protected override void OnStart()
