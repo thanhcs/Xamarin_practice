@@ -8,7 +8,7 @@ namespace XamarinForms_Udemy
 		{
 			InitializeComponent();
 
-			MainPage = new ImageEx();
+			MainPage = new ListEx();
 		}
 
 		protected override void OnStart()
