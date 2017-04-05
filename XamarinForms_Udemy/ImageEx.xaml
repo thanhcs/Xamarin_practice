@@ -5,13 +5,13 @@
              BackgroundColor="Black">
     <AbsoluteLayout>
         <Image x:Name="image" AbsoluteLayout.LayoutBounds="0,.5, 1, 1" AbsoluteLayout.LayoutFlags="All" />
-        <StackLayout Padding="20, 0" Orientation="Horizontal" VerticalOptions="Center" BackgroundColor="Yellow"
+        <StackLayout Padding="20, 0" Orientation="Horizontal" VerticalOptions="Center" 
                      AbsoluteLayout.LayoutBounds=".5, .05, .9, 100" 
                      AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional">
-            <Label Text="PRE" TextColor="White" HorizontalOptions="Center" BackgroundColor="Blue"/>
-            <!--<ActivityIndicator Color="White" IsRunning="{Binding Source={x:Reference image}, Path=IsLoading}" />-->
-            <ActivityIndicator Color="White" IsRunning="True" HorizontalOptions="CenterAndExpand" BackgroundColor="Blue"/>
-            <Label Text="NEXT" TextColor="White" HorizontalOptions="End"  BackgroundColor="Blue"/>
+            <Button Image="left.png" BackgroundColor="Transparent" Clicked="OnPre" HorizontalOptions="Center" />
+            <ActivityIndicator Color="White" IsRunning="{Binding Source={x:Reference image}, Path=IsLoading}" HorizontalOptions="CenterAndExpand"/>
+            <!--<ActivityIndicator Color="White" IsRunning="True" HorizontalOptions="CenterAndExpand" />-->
+            <Button Image="right.png" BackgroundColor="Transparent" Clicked="OnNextHandler" HorizontalOptions="End" />
         </StackLayout>
     </AbsoluteLayout>
 </ContentPage>
