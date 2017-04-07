@@ -1,19 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using XamarinForms_Udemy.Models;
-using XamarinForms_Udemy.Service.Interface;
 
 namespace XamarinForms_Udemy.Service
 {
-    class SearchService : ISearchService
+    class SearchService
     {
-        List<Search> rentals;
+       List<Search> rentals;
         public SearchService()
         {
-            rentals = new List<Search>()
+            rentals = new List<Search>
             {
                 new Search()
                 {
@@ -31,9 +31,9 @@ namespace XamarinForms_Udemy.Service
                 },
             };
         }
-        public void DeleteSearch(Search item)
+        public void DeleteSearch(int searchId)
         {
-            rentals.Remove(item);
+            rentals.Remove(rentals.Single(s => s.Id == searchId));
         }
 
         public IEnumerable<Search> GetSearches(string filter = null)
@@ -43,7 +43,7 @@ namespace XamarinForms_Udemy.Service
                 return rentals;
             }
 
-            return rentals.Where(i => i.Location.Contains(filter));
+            return rentals.Where(i => i.Location.StartsWith(filter, StringComparison.CurrentCultureIgnoreCase));
         }
     }
 }

@@ -7,13 +7,19 @@
                     iOS="0, 20, 0, 0" />
     </ContentPage.Padding>
     <StackLayout Orientation="Vertical">
-        <SearchBar Placeholder="Search" />
-        <ListView x:Name="listView"                  
-                  GroupDisplayBinding="{Binding Title}"
-                  GroupShortNameBinding="{Binding ShortTitle}">
+        <SearchBar Placeholder="Search" TextChanged="SearchBar_OnTextChanged" x:Name="searchBar"/>
+        <ListView x:Name="listView"       
+                  IsGroupingEnabled="True" GroupDisplayBinding="{Binding Title}"
+                  IsPullToRefreshEnabled="True" Refreshing="ListView_OnRefreshing"
+                  ItemSelected="ListView_OnItemSelected"
+                  ItemTapped="ListView_OnItemTapped">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding Location}" Detail="{Binding Checkin}"/>
+                    <TextCell Text="{Binding Location}" Detail="{Binding Period}" TextColor="Black" DetailColor="Gray">
+                        <TextCell.ContextActions>
+                            <MenuItem Text="Delete" Clicked="MenuItem_OnClicked" IsDestructive="True" CommandParameter="{Binding .}"></MenuItem>
+                        </TextCell.ContextActions>
+                    </TextCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
